@@ -20,17 +20,17 @@
     grid-column: 1 / -1; /* Span across all columns for the footer */
 }
 .item1 {
-    background-color: lightblue;
+    background-color: green;
 }
 
 .item2 {
-    background-color: lightgreen;
+    background-color: green;
 }
 
 .item3 {
-    background-color: lightcoral;
+    background-color: green;
 }
 
 .item4 {
-    background-color: lightgray;
+    background-color: green;
 }
