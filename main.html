@@ -1,24 +1,93 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+        .grid-container {
+            display: grid;
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            gap: 5px;
+            grid-template-areas:
+                "header header header"
+                "sidebar content1 content1"
+                "sidebar content2 content3"
+                "sidebar content4 content4";
+            background-color: white;
+            padding: 10px;
+        }
 
-  <body>
-	  <div class="grid-container">
-    <div class="item1">1</div>
-    <div class="item2">2</div>
-    <div class="item3">3</div>
-    <div class="item4">4</div>
-	<div class="item4">5</div>
-	<div class="item4">6</div>
-	<div class="item4">7</div>
-	<div class="item4">8</div>
-	<div class="item4">9</div>
-	<div class="item4">10</div>
-</div>
-    </body>
-    <script type="text/javascript" src="./script.js"></script>
-  </body>
+        .grid-item {
+            background-color: green;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            min-height: 100px;
+        }
+
+        .item1 {
+            grid-area: header;
+        }
+
+        .item2 {
+            grid-area: sidebar;
+        }
+
+        .item3, .item4 {
+            grid-area: content1;
+        }
+
+        .item5 {
+            grid-area: content2;
+        }
+
+        .item6 {
+            grid-area: content3;
+        }
+
+        .item7, .item8, .item9 {
+            grid-area: content4;
+        }
+
+        .item10 {
+            grid-area: content4;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "content1"
+                    "content2"
+                    "content3"
+                    "content4";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>
+        <div class="grid-item item4">4</div>
+        <div class="grid-item item5">5</div>
+        <div class="grid-item item6">6</div>
+        <div class="grid-item item7">7</div>
+        <div class="grid-item item8">8</div>
+        <div class="grid-item item9">9</div>
+        <div class="grid-item item10">10</div>
+    </div>
+</body>
 </html>
