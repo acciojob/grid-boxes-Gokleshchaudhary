@@ -11,83 +11,92 @@
             box-sizing: border-box;
         }
 
+        body {
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
         .grid-container {
             display: grid;
-            width: 100%;
-            max-width: 1000px;
-            margin: 20px auto;
-            gap: 5px;
-            grid-template-areas:
-                "header header header"
-                "sidebar content1 content1"
-                "sidebar content2 content3"
-                "sidebar content4 content4";
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto auto;
+            gap: 4px;
             background-color: white;
-            padding: 10px;
+            padding: 4px;
         }
 
         .grid-item {
-            background-color: green;
+            background-color: #008000;
             color: white;
             padding: 20px;
-            text-align: center;
             font-size: 24px;
-            min-height: 100px;
+            font-weight: bold;
         }
 
-        .item1 {
-            grid-area: header;
+        /* Grid item positions */
+        .item-1 {
+            grid-column: 1 / -1;
+            grid-row: 1;
         }
 
-        .item2 {
-            grid-area: sidebar;
+        .item-2 {
+            grid-column: 1;
+            grid-row: 2 / span 3;
         }
 
-        .item3, .item4 {
-            grid-area: content1;
+        .item-3 {
+            grid-column: 2;
+            grid-row: 2;
         }
 
-        .item5 {
-            grid-area: content2;
+        .item-4 {
+            grid-column: 3;
+            grid-row: 2;
         }
 
-        .item6 {
-            grid-area: content3;
+        .item-5 {
+            grid-column: 2 / span 1;
+            grid-row: 3;
         }
 
-        .item7, .item8, .item9 {
-            grid-area: content4;
+        .item-6 {
+            grid-column: 3;
+            grid-row: 3;
         }
 
-        .item10 {
-            grid-area: content4;
+        .item-7 {
+            grid-column: 2;
+            grid-row: 4;
         }
 
-        @media (max-width: 768px) {
-            .grid-container {
-                grid-template-areas:
-                    "header"
-                    "sidebar"
-                    "content1"
-                    "content2"
-                    "content3"
-                    "content4";
-            }
+        .item-8 {
+            grid-column: 2;
+            grid-row: 4;
+        }
+
+        .item-9 {
+            grid-column: 3;
+            grid-row: 4;
+        }
+
+        .item-10 {
+            grid-column: 2 / span 2;
+            grid-row: 5;
         }
     </style>
 </head>
 <body>
     <div class="grid-container">
-        <div class="grid-item item1">1</div>
-        <div class="grid-item item2">2</div>
-        <div class="grid-item item3">3</div>
-        <div class="grid-item item4">4</div>
-        <div class="grid-item item5">5</div>
-        <div class="grid-item item6">6</div>
-        <div class="grid-item item7">7</div>
-        <div class="grid-item item8">8</div>
-        <div class="grid-item item9">9</div>
-        <div class="grid-item item10">10</div>
+        <div class="grid-item item-1">1</div>
+        <div class="grid-item item-2">2</div>
+        <div class="grid-item item-3">3</div>
+        <div class="grid-item item-4">4</div>
+        <div class="grid-item item-5">5</div>
+        <div class="grid-item item-6">6</div>
+        <div class="grid-item item-7">7</div>
+        <div class="grid-item item-8">8</div>
+        <div class="grid-item item-9">9</div>
+        <div class="grid-item item-10">10</div>
     </div>
 </body>
 </html>
